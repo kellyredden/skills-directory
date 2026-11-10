@@ -1,0 +1,111 @@
+Create a professional game flow chart using the supplied game data.
+Requirements:
+- Use standard flowchart conventions.
+- Rounded rectangles = Game States.
+- Diamonds = Decision Points.
+- Green rectangles = Outcomes / Rewards.
+- Grey rectangles = Information States.
+- Arrows must show all possible paths.
+- Include YES/NO labels on decision branches.
+- Show feature dependencies and side effects as connected branches.
+- Start from Game Launch.
+- End every branch with either a feature completion state or a return to the main game loop.
+- Avoid crossing arrows where possible.
+- Organize flow vertically with optional side branches.
+- Output in Mermaid flowchart format.
+  
+GAME NAME: {Game_Name}
+
+GAME STATES:
+{Base_Game_State}
+{Free_Game_Feature}
+{Progression_Feature}
+{Bonus_Feature}
+{Optional_Feature_1}
+{Optional_Feature_2}
+
+ROUND START:
+{Main_Round_Start}
+
+PRIMARY TRIGGERS:
+{Trigger_1}
+{Trigger_2}
+{Trigger_3}
+{Trigger_4}
+
+DECISIONS:
+IF {Trigger_1}
+THEN {Outcome_1}
+ELSE {Default_Path_1}
+
+IF {Trigger_2}
+THEN {Outcome_2}
+ELSE {Default_Path_2}
+
+IF {Trigger_3}
+THEN {Outcome_3}
+ELSE {Default_Path_3}
+
+IF {Trigger_4}
+THEN {Outcome_4}
+ELSE {Default_Path_4}
+
+WIN LOGIC:
+IF {Win_Condition}
+THEN {Award_Win}
+ELSE {No_Award}
+
+FEATURE RELATIONSHIPS:
+{Collector_Feature} -> {Progression_Feature}
+
+--- 
+
+### Example Prompt 
+This is an example of a prompt edited for 
+
+MECHANICS  
+Name: Rise Of Olympus Sticky Multiplier
+Base Game 
+Wrath Of Olympus
+Hands Of God
+Free Spins   
+Losing Spins
+Multiplier increase 
+
+ROUND START:  
+Base Game Spin 
+
+TRIGGERS:  
+God Meter Filled
+Grid Cleared
+Losing Spins 
+Random Trigger Hands of God
+
+
+FEATURE RELATIONSHIPS:  
+losing Spin -> Multiplier ladder moves up, Multiplier ladder increased by +1
+Random non winning spin  -> Hands of god 
+Clearing the Grid -> Free Spins 
+Free Spins -> Wrath of Olympus -> Hades – plus 4 Extra spins OR Poseidon – plus 3 Extra spins, OR Zeus - plus 2 Extra spins. 
+
+RULES:  
+IF Losing Spin occurs
+THEN Increase Multiplier Ladder, Multiplier is sticky 
+ELSE Continue Base Game 
+IF Win Exists  
+THEN Award Win  
+ELSE No Award 
+
+IF Ladder Level 5 Reached  
+THEN Increase Multiplier Ladder, Multiplier is sticky  
+ELSE Continue Base Game 
+IF Win Exists  
+THEN Award Win  
+ELSE No Award 
+
+IF Grid is cleared 
+THEN Enter Free Spins  
+ELSE Evaluate Wins IF Win Exists  
+THEN Award Win  
+ELSE No Award 
+Free Spins ends after 10 spins
